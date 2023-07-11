@@ -6,22 +6,19 @@ Header guard and the class name should be different to prevent compile time issu
 
 class GameStateManager {
     private:
-        int level, score, health;
+        int score;
 
         static GameStateManager* instance;
 
-        GameStateManager(): level(1), score(0), health(0) {}
+        GameStateManager(): score(0) {}
 
     public:
 
         static GameStateManager* getInstance();
-        int getLevel() { return level;}
-        int getScore() { return score;}
-        int getHealth() { return health;}
 
-        void setLevel(int l) { level = l;}
+        int getScore() { return score;}
+
         void setScore(int s) { score = s;}
-        void setHealth(int h) { health = h;}
 };
 
 
